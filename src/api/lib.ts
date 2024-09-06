@@ -2,6 +2,7 @@ import axios from 'axios'
 import { user } from '../data/user'
 import { Goal, Transaction, User } from './types'
 
+//Export necessary functions
 export const API_ROOT = 'https://fencer-commbank.azurewebsites.net'
 
 export async function getUser(): Promise<User | null> {
@@ -52,6 +53,7 @@ export async function updateGoal(goalId: string, updatedGoal: Goal): Promise<boo
   }
 }
 
+//Support for dynamically updating Goal Icon
 export async function updateGoalIcon(goalId: string, icon: string): Promise<boolean> {
   try {
     await axios.put(`${API_ROOT}/api/Goal/${goalId}`, { icon })
