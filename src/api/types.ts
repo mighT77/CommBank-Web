@@ -1,3 +1,4 @@
+//Support for various necessary interfaces
 export interface Account {
   id: string
   number: number
